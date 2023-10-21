@@ -29,6 +29,7 @@ function startGame() {
 
 
 function setNextQuestion() {
+    resetState() //this will trigger a function that resets the questions - deletes the old ones
     showQuestion(randomQuestions[currentQuestionIndex])
 }
 
@@ -42,8 +43,12 @@ function showQuestion(question)  {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer) 
-        answerButtonElement
+        answerButtonElement.appendChild(button)
     })
+}
+
+function resetState() {
+    next-Button.classList.add('hide') //this adds the hide class, which makes it hidden by CSS
 }
 
 function selectAnswer() {
