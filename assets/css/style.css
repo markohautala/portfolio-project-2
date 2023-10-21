@@ -20,6 +20,25 @@ body {
     background: linear-gradient(0deg, rgba(228, 206, 169, 1) 0%, rgba(209, 198, 204, 1) 24%, rgba(122, 129, 157, 1) 100%);
 }
 
+/*The container that containes the class container*/
+#container-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*The container for all the quiz items - buttons, answers and questions together*/
+.container {
+    text-align: center;
+    border: 2px solid black;
+    width: 350px;
+    height: 350px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.812);
+}
+
+
 /*MAIN*/
 main {
     height: 100vh;
