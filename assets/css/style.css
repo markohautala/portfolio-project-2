@@ -13,13 +13,31 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    font-family: 
+    /*This color gradient is responsive on all devices-sizes since it is applied to the body*/
+    background: rgb(238, 174, 202);
+    background: linear-gradient(188deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
-/*This color gradient is responsive on all devices*/
 main {
     height: 100vh;
     width: 100%;
-    background: rgb(238, 174, 202);
-    background: linear-gradient(188deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+/*styling of the social icons*/
+#social {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 200%;
+}
+
+#social a {
+    color: #000000;
+}
+
+#social a:hover {
+    color: #ffffff;
+    transition: color 0.5s;
 }
