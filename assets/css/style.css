@@ -1,10 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Single+Day&display=swap');
 
 /*generic stylerules*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Single Day', Passero One, sans-serif;
 }
 
 body {
