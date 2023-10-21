@@ -20,29 +20,30 @@ body {
     background: linear-gradient(0deg, rgba(228, 206, 169, 1) 0%, rgba(209, 198, 204, 1) 24%, rgba(122, 129, 157, 1) 100%);
 }
 
+/*MAIN*/
+main {
+    height: 100vh;
+    width: 100%;
+}
+
 /*The container that containes the class container*/
 #container-section {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding-top: 20px;
+    margin-bottom: 100px;
 }
 
 /*The container for all the quiz items - buttons, answers and questions together*/
 .container {
     text-align: center;
-    border: 2px solid black;
-    width: 350px;
-    height: 350px;
+    border: 3px solid rgba(122, 129, 157, 1);
+    width: 400px;
+    height: 400px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.812);
-}
-
-
-/*MAIN*/
-main {
-    height: 100vh;
-    width: 100%;
 }
 
 /*section holding the logo*/
@@ -53,13 +54,20 @@ main {
 
 /*the logo with the harry potter text*/
 #logo {
-    width: 60%;
+    width: 80%;
     
 }
 
 
 
 /*FOOTER*/
+
+#footer {
+    height: 60px;
+    width: 100%;
+    align-self: flex-end;
+    margin-top: 60px;
+}
 
 /*styling of the social icons*/
 #social {
@@ -72,7 +80,7 @@ main {
     transition: transform 0.6s;
 }
 
-#social a {
+#social i {
     color: #7A819DFF;
 }
 
