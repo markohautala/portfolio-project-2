@@ -1,9 +1,10 @@
 const startButton = document.getElementById('start-button')
 const questionContainerElement = document.getElementById('question-div')
 
-const randomQuestions, currentQuestionIndex
+let randomQuestions, currentQuestionIndex
 
 const questionElement = document.getElementById('question')
+const answerButtonElement = document.getElementById('answer-buttons')
 
 // when start quiz button is clicked, startGame function is started
 startButton.addEventListener('click', startGame)
@@ -15,7 +16,7 @@ function startGame() {
     startButton.classList.add('hide')
     
     //randomizes the questions
-    randomQuestions = questions.sort(() => Math.random() - 0.5 )
+    randomQuestions = questions.sort(() => Math.random() - .5)
 
     currentQuestionIndex = 0
 
@@ -32,7 +33,10 @@ function setNextQuestion() {
 }
 
 function showQuestion(question)  {
-
+    questionElement.innerText  = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button') //creates buttons for each answer
+    })
 }
 
 function selectAnswer() {
@@ -41,11 +45,12 @@ function selectAnswer() {
 
 const questions = [
     {
-        question: "question1"
+        question: "What is the core of Hermione Granger's wand?",
         answers: [
-            { text: 'option1', correct: true},
-            { text: 'option2', correcct: false},
-            { }
+            { text: 'Dragon Heartstring', correct: true},
+            { text: 'Phoenix Feather', correct: false},
+            { text: 'Veela Hair', correct: false},
+            { text: 'Thestral Tail Hair', correct: false},
         ]
     }
 ]
