@@ -35,7 +35,14 @@ function setNextQuestion() {
 function showQuestion(question)  {
     questionElement.innerText  = question.question
     question.answers.forEach(answer => {
-        const button = document.createElement('button') //creates buttons for each answer
+        const button = document.createElement('button')//creates buttons for each answer
+        button.innerText = answers.text
+        button.classList.add('button') //adds the "button"-class to the buttons, so that css styles them
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer) 
+        answerButtonElement
     })
 }
 
