@@ -1,4 +1,5 @@
 
+
 /*generic stylerules*/
 * {
     padding: 0;
@@ -14,14 +15,31 @@ body {
     padding: 0;
     position: relative;
     /*This color gradient is responsive on all devices-sizes since it is applied to the body*/
-    background: rgb(238, 174, 202);
-    background: linear-gradient(188deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: rgb(228, 206, 169);
+    background: linear-gradient(0deg, rgba(228, 206, 169, 1) 0%, rgba(209, 198, 204, 1) 24%, rgba(122, 129, 157, 1) 100%);
 }
 
+/*MAIN*/
 main {
     height: 100vh;
     width: 100%;
 }
+
+/*section holding the logo*/
+#logo-section {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*the logo with the harry potter text*/
+#logo {
+    width: 60%;
+    
+}
+
+
+
+/*FOOTER*/
 
 /*styling of the social icons*/
 #social {
@@ -35,7 +53,7 @@ main {
 }
 
 #social a {
-    color: #000000;
+    color: #7A819DFF;
 }
 
 #social i:hover {
