@@ -10,8 +10,8 @@
 
 /*generic colors to be used in the correct and wrong answers*/
 :root {
-    --color-wrong: #ff0000;
-    --color-correct: #5eff69;
+    --color-wrong: #ff6e6e;
+    --color-correct: #7dfa85;
 }
 
 body {
