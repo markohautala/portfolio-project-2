@@ -98,7 +98,6 @@ button.wrong {
 
 /*Styling for hover on the buttons*/
 button:hover {
-    /*background-color: #ffffff;*/
     transition: background-color 0.2s;
     border-color: white;
 }
