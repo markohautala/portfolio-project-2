@@ -55,6 +55,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide'); //this adds the hide class, which makes it hidden by CSS
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
