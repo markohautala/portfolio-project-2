@@ -55,7 +55,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    clearStatusClass(document.body)
+    clearStatusClass(document.body);
     nextButton.classList.add('hide'); //this adds the hide class, which makes it hidden by CSS
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -103,7 +103,7 @@ const questions = [
             { text: 'Thestral Tail Hair', correct: false }
         ]
     },
-{
+    {
         question: 'What is the name of the mermaid colony that Harry encounters during the Triwizard Tournament\'s Second Task?',
         answers: [
             { text: 'Merfolk Mire', correct: false },
@@ -112,7 +112,7 @@ const questions = [
             { text: 'The Great Siren Sea', correct: true }
         ]
     },
-{
+    {
         question: 'Who is the Half-Blood Prince?',
         answers: [
             { text: 'Sirius Black', correct: false },
@@ -121,7 +121,7 @@ const questions = [
             { text: 'Remus Lupin', correct: false }
         ]
     },
-{
+    {
         question: 'What is the primary ingredient in Felix Felicis, the "Liquid Luck" potion?',
         answers: [
             { text: 'Unicorn Blood', correct: false },
@@ -130,7 +130,7 @@ const questions = [
             { text: 'Phoenix Tears', correct: false }
         ]
     },
-{
+    {
         question: 'What does the Mirror of Erised show to someone who looks into it?',
         answers: [
             { text: 'Their deepest fear', correct: false },
@@ -139,7 +139,7 @@ const questions = [
             { text: 'A random fantasy', correct: false }
         ]
     },
-{
+    {
         question: 'Which subject does Professor Trelawney teach at Hogwarts?',
         answers: [
             { text: 'Divination', correct: true },
@@ -148,8 +148,8 @@ const questions = [
             { text: 'Care of Magical Creatures', correct: false }
         ]
     },
-{
-    question: 'What is the core of Harry Potter\'s wand?',
+    {
+        question: 'What is the core of Harry Potter\'s wand?',
         answers: [
             { text: 'Phoenix feather', correct: false },
             { text: 'Dragon heartstring', correct: true },
@@ -157,8 +157,8 @@ const questions = [
             { text: 'Veela hair', correct: false }
         ]
     },
-{
-    question: 'What is the first name of Harry\'s aunt who raised him?',
+    {
+        question: 'What is the first name of Harry\'s aunt who raised him?',
         answers: [
             { text: 'Petunia', correct: true },
             { text: 'Lily', correct: false },
@@ -166,7 +166,7 @@ const questions = [
             { text: 'Augusta', correct: false }
         ]
     },
-{
+    {
         question: 'What spell is used to summon an object to the caster?',
         answers: [
             { text: 'Expelliarmus', correct: false },
@@ -175,7 +175,7 @@ const questions = [
             { text: 'Lumos', correct: false }
         ]
     },
-{
+    {
         question: 'What is the name of the tree that Harry and Ron crash the Flying Ford Anglia into?',
         answers: [
             { text: 'Whomping Willow', correct: true },
@@ -184,7 +184,7 @@ const questions = [
             { text: 'Howling Hemlock', correct: false }
         ]
     },
-{
+    {
         question: 'What type of broom does Harry receive as a gift from Professor McGonagall?',
         answers: [
             { text: 'Nimbus 2000', correct: false },
@@ -193,8 +193,8 @@ const questions = [
             { text: 'Comet 260', correct: false }
         ]
     },
-{
-    question: 'What is the name of Hagrid\'s giant spider?',
+    {
+        question: 'What is the name of Hagrid\'s giant spider?',
         answers: [
             { text: 'Fluffy', correct: false },
             { text: 'Aragog', correct: true },
@@ -202,7 +202,7 @@ const questions = [
             { text: 'Norbert', correct: false }
         ]
     },
-{
+    {
         question: 'Which animal does Professor McGonagall transform into?',
         answers: [
             { text: 'Owl', correct: false },
@@ -211,7 +211,7 @@ const questions = [
             { text: 'Toad', correct: false }
         ]
     },
-{
+    {
         question: 'What is the name of the house-elf who serves the Black family?',
         answers: [
             { text: 'Kreacher', correct: true },
@@ -220,7 +220,7 @@ const questions = [
             { text: 'Hokey', correct: false }
         ]
     },
-{
+    {
         question: 'What is the incantation for the Patronus Charm?',
         answers: [
             { text: 'Expelliarmus', correct: false },
@@ -229,7 +229,7 @@ const questions = [
             { text: 'Alohomora', correct: false }
         ]
     },
-{
+    {
         question: 'Which house at Hogwarts does Luna Lovegood belong to?',
         answers: [
             { text: 'Gryffindor', correct: false },

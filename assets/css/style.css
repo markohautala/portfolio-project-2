@@ -74,7 +74,7 @@ main {
 .button-grid {
     display: grid;
     /*makes 2 columns and auto is so that it fills/covers itself all the way horisontally*/
-    grid-template-columns: repeat(2, auto); 
+    grid-template-columns: repeat(2, auto);
     gap: 20px;
     margin: 20px 0;
 }
@@ -103,7 +103,7 @@ button:hover {
 }
 
 .hide {
-    display:none;
+    display: none;
 }
 
 
