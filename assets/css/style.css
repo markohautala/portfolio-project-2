@@ -84,6 +84,8 @@ main {
     padding: 17px 5px;
     font-size: 140%;
     border-radius: 10px;
+    border: 2px solid black;
+    color: black;
 }
 
 /*these 2 codes underneath will change the colors on the buttons when an answer is right or wrong*/
