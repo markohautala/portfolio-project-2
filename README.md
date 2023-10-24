@@ -1,4 +1,6 @@
-# Harry Potter Quiz
+<p align="center"><img src="https://see.fontimg.com/api/renderfont4/MVZ6w/eyJyIjoiZnMiLCJoIjoyNDgsInciOjIwMDAsImZzIjoxMjQsImZnYyI6IiNGRUY3RjciLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/SGFycnkgUG90dGVyIFF1aXo/harry-p.png" alt="Harry Potter Logo" width="800"/></p>
+
+## Harry Potter Quiz-app
 
 ### Welcome to the Harry Potter Quiz App. Test your magical knowledge with a collection of enchanting questions from the world of Harry Potter.
 
@@ -7,7 +9,22 @@
 
 <hr>
 
-# Features
+## Coding languages that I have used
+
+Accoring to my GitHub, these are the coding-languages that are used in the project:
+
+<hr>
+
+## What tools/resources I have used
+- Font awesome for all the icons in the footer
+- The color-gradient CSS-code was created by using [this webpage](https://cssgradient.io/).
+- Google fonts are used to display the choise of fonts in the webpages textareas.
+- DevTools has been used all the time during the development process to preview the code-changes.
+- To generate the Logo/hero image of "harry Potter Quiz" i used [this webpage](https://www.fontspace.com/).
+
+<hr>
+
+## Features
 - The logo: This project features a Harry Potter-themed logo at the page's header, complete with a font reminiscent of the iconic style used in the movies, and it displays the text 'Harry Potter Quiz.' Its aim is to immerse the user in an authentic Harry Potter experience.
 
 - Color gradient background: The entire page is adorned with a continuous gradient background, smoothly transitioning between different colors from top to bottom. This design choice is intended to provide the user with a visually pleasing and enjoyable experience while doing the quiz.
@@ -18,13 +35,17 @@
 
 <hr>
 
-# Browsers and testing
+## Browsers and testing
 
 <hr>
 
-###
+## Things to add in the futute to the webpage
+- A counter in the quiz-module that counts how many "correct answers" a user gets during the quiz - like a score and then return this value to the user so that it displys on the screen or quiz-module itself.
+- More questions - but for now it could be considered enough with the existing 15 questions that are built in the quiz-module for the purpose of this project.
 
-# Bug Details
+<hr>
+
+## Bug Details
 
 Here are the details of the resolved bugs:
 
@@ -32,22 +53,23 @@ Describe the bug and the steps to reproduce it.
 Explain how the bug was resolved, including any code changes or fixes.
 Discuss the impact of this bug on users and the importance of the fix.
 
-### Bug 1
+
+#### Bug 1
 - When I enlarged the quiz-section and the Harry Potter logo, it all pushed the content on top of the footer. This was not desired and I first tried to apply "padding-top: 60px;" in the footer to give it some space. This did not solve the issue since it created space for the footer, but it was not transparent like it sohuld be. But then I added "margin-top: 60px;" instead and this fixed the issue.
 
-### Bug 2
+#### Bug 2
 - Another problem was a UX/design problem and that was when I added the background colors for the buttons to green and red, it was disturbing to have a hover background color to white since it removed the red/green color. This resulted in the fact that if you answered correctly, the button did not turn green if you had your mouse/pointer on it. I removed the hover effect and I settled with a border-color instead on the hover.
 
-### Bug 3
+#### Bug 3
 - When I deployed my project early, it all looked like it should on my desktop but on my iphone IOS the text in the buttons were blue but on the desktop version they were black. Apperently, IOS sets button colors to a initial blue color. Also buttons on IOS dont have border-color but on my chrome and windows they did. This was fixed by first adding a border-color of black with 2px thickness and finally I had to specify the color inside of the buttons to black, so that it would "overwrite" the default styling from the IOS-units. This fixed the issue.
 
 <hr>
 
-# Lighthouse
+## Lighthouse testing and result
 
 <hr>
 
-# Validator testing
+## Validator testing
 
 - CSS: 
 
@@ -55,13 +77,15 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 - JavaScript: 
 
-# Deployment
+## Deployment
 
 <hr>
 
-# Credits
+## Credits
+
+- I have got inspiration from "Web Dev Simplified" från YouTube - they had a video on how to structure a quiz app and it has been really helpful in the process.of building my own in this project.
 
 <hr>
 
-### Media
+## Media
 
