@@ -28,7 +28,7 @@ body {
 
 /*MAIN*/
 main {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -51,6 +51,7 @@ main {
     width: 100%;
     padding-top: 20px;
     margin-bottom: 100px;
+
 }
 
 /*The container for all the quiz items - buttons, answers and questions together*/
@@ -114,7 +115,7 @@ button:hover {
     height: 60px;
     width: 100%;
     align-self: flex-end;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
 
 /*styling of the social icons*/
