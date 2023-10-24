@@ -139,3 +139,25 @@ button:hover {
     transition: color 0.4s;
     transform: scale(1.2);
 }
+
+/*responsive design and media queries*/
+
+/*tablets*/
+@media screen and (min-width: 768px) {
+    .container {
+        width: 600px;
+        height: 600px;
+    }
+
+    .button {
+        /*makes the space bigger between the buttons*/
+        margin-top: 35px;
+        font-size: 30px;
+    }
+
+    #question {
+        margin-top: 40px;
+        font-size: 34px;
+    }
+
+}
