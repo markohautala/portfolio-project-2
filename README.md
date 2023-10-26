@@ -110,7 +110,7 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 ## Credits
 
-- I have got inspiration from "Web Dev Simplified" från YouTube - they had a video on how to structure a quiz app and it has been really helpful in the process.of building my own in this project.
+- I have got inspiration from "Web Dev Simplified" from YouTube - they had a video on how to structure a quiz app and it has been really helpful in the process of building my own in this project.
 
 <hr>
 
