@@ -40,9 +40,23 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 
 - Color gradient background: The entire page is adorned with a continuous gradient background, smoothly transitioning between different colors from top to bottom. This design choice is intended to provide the user with a visually pleasing and enjoyable experience while doing the quiz.
 
-- Quiz-module: The centerpiece of this application is the quiz module. It commences with a 'start quiz' button, followed by a sequence of 15 unique questions derived from the Harry Potter series. Each question presents four answer choices, and upon selection, it visually indicates correctness with either a green or red color. Subsequently, a 'next question' button appears after each question response, guiding the user to the subsequent question. Upon reaching the final question, this button transforms into a 'restart quiz' option, allowing users to begin the quiz anew.
+- Quiz-module: The centerpiece of this application is the quiz module. It commences with a 'start quiz' button, followed by a sequence of 15 unique questions derived from the Harry Potter series.
+<p align="center"><img src="assets/images/picture1.png" alt="responsive design" 400"/></p>
+
+- Each question presents four answer choices, and upon selection, it visually indicates correctness with either a green or red color. 
+<p align="center"><img src="assets/images/picture2.png" alt="responsive design" 400"/></p>
+<p align="center"><img src="assets/images/picture3.png" alt="responsive design" 400"/></p>
+
+- Subsequently, a 'next question' button appears after each question response, guiding the user to the subsequent question. 
+<p align="center"><img src="assets/images/picture4.png" alt="responsive design" 400"/></p>
+
+Upon reaching the final question, this button transforms into a 'restart quiz' option, allowing users to begin the quiz anew.
+<p align="center"><img src="assets/images/picture5.png" alt="responsive design" 400"/></p>
 
 - Footer: At the bottom of the page, underneath the quiz-module, there is a footer-section with 3 icons - Instagram, GitHub and a LinkedIn icon with internal links that open in a new tab. These links takes the user to the creater of the quiz-app (me, the developer).
+<p align="center"><img src="assets/images/picture6.png" alt="responsive design" 400"/></p>
+
+- All the buttons, including the ones in the footer are styled to have a :hover effect to help the user to understand and visually know what buttin is selected with the pointer/mouse.
 
 <hr>
 
@@ -76,20 +90,16 @@ Continous testing and inspection with dev-tools and the usage of media queries h
 ## Things to add in the futute to the webpage
 - A counter in the quiz-module that counts how many "correct answers" a user gets during the quiz - like a score and then return this value to the user so that it displys on the screen or quiz-module itself.
 - More questions - but for now it could be considered enough with the existing 15 questions that are built in the quiz-module for the purpose of this project.
+- A "reset quiz"-button so that the user can reset the results in the quiz app.
 
 <hr>
 
 ## Bug Details
 
-Here are the details of the resolved bugs:
-
-Describe the bug and the steps to reproduce it.
-Explain how the bug was resolved, including any code changes or fixes.
-Discuss the impact of this bug on users and the importance of the fix.
-
-
 #### Bug 1
-- When I enlarged the quiz-section and the Harry Potter logo, it all pushed the content on top of the footer. This was not desired and I first tried to apply "padding-top: 60px;" in the footer to give it some space. This did not solve the issue since it created space for the footer, but it was not transparent like it sohuld be. But then I added "margin-top: 60px;" instead and this fixed the issue.
+- When I enlarged the quiz-section and the Harry Potter logo, it all pushed the content on top of the footer. This was not desired and I first tried to apply "padding-top: 60px;" in the footer to give it some space. This did not solve the issue since it created space for the footer, but it was not transparent like it sohuld be. But then I added "margin-top: 60px;" instead and this fixed the issue. 
+   
+   It was important to fix this to ensure that the UX is good and that the content and elements are separate and visible.
 
 #### Bug 2
 - Another problem was a UX/design problem and that was when I added the background colors for the buttons to green and red, it was disturbing to have a hover background color to white since it removed the red/green color. This resulted in the fact that if you answered correctly, the button did not turn green if you had your mouse/pointer on it. I removed the hover effect and I settled with a border-color instead on the hover.
@@ -117,9 +127,9 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 ## Validator testing
 
-- CSS: No warnings or problems to show - CSS code validated using W3C CSS Validator.
+- CSS: No warnings or problems to show - CSS code validated using W3C CSS Validator and JigSaw.
 
-- HTML: The HTML code passed the W3 validator with no warnings - "Document checking completed. No errors or warnings to show."
+- HTML: The HTML code passed the W3C validator with no warnings - "Document checking completed. No errors or warnings to show."
 
 - JavaScript: The JavaScript code for this project passed and got validated using the JSHint with no warnings or errors.
 
