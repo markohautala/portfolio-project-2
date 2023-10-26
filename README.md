@@ -29,16 +29,8 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 
 <hr>
 
-## What tools/resources I have used
-- Font awesome for all the icons in the footer
-- The color-gradient CSS-code was created by using [this webpage](https://cssgradient.io/).
-- Google fonts are used to display the choise of fonts in the webpages textareas.
-- DevTools has been used all the time during the development process to preview the code-changes.
-- To generate the Logo/hero image of "harry Potter Quiz" i used [this webpage](https://www.fontspace.com/).
-
-<hr>
-
 ## Features
+
 - The logo: This project features a Harry Potter-themed logo at the page's header, complete with a font reminiscent of the iconic style used in the movies, and it displays the text 'Harry Potter Quiz.' Its aim is to immerse the user in an authentic Harry Potter experience.
 
 - Color gradient background: The entire page is adorned with a continuous gradient background, smoothly transitioning between different colors from top to bottom. This design choice is intended to provide the user with a visually pleasing and enjoyable experience while doing the quiz.
@@ -49,7 +41,20 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 
 <hr>
 
+## What tools/resources I have used
+- Font awesome for all the icons in the footer
+- The color-gradient CSS-code was created by using [this webpage](https://cssgradient.io/).
+- Google fonts are used to display the choise of fonts in the webpages textareas.
+- DevTools has been used all the time during the development process to preview the code-changes.
+- To generate the Logo/hero image of "harry Potter Quiz" i used [this webpage](https://www.fontspace.com/).
+- To get the different favicons right i used [this website](https://favicon.io/).
+
+
+<hr>
+
 ## Browsers and testing
+
+The website has been tested and seamlessly operates across various browsers, free from any compatibility issues. It ensures a smooth and consistent user experience for all visitors.
 
 <hr>
 
@@ -104,7 +109,18 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 - JavaScript: 
 
+<hr>
+
 ## Deployment procedure
+
+This site is deployed using GitHub pages.
+To deploy the page using GitHub pages:
+- Login or signup to GitHub.
+- Go to the repository for this project: [link](https://github.com/markohautala/portfolio-project-2).
+- Click the settings button.
+- Select pages in the left hand navigation menu.
+- From the source dropdown, select main branch and click save.
+- The site has now been deployed - it might take a few minutes for it to load.
 
 
 <hr>
@@ -114,6 +130,3 @@ Discuss the impact of this bug on users and the importance of the fix.
 - I have got inspiration from "Web Dev Simplified" from YouTube - they had a video on how to structure a quiz app and it has been really helpful in the process of building my own in this project.
 
 <hr>
-
-## Media
-
