@@ -13,6 +13,20 @@
 
 Accoring to my GitHub, these are the coding-languages that are used in the project:
 
+<p align="center"><img src="assets/images/languages.png" alt="programming languages" 800"/></p>
+
+- JavaScript: 43.9%
+
+- CSS: 16.6%
+
+- HTML: 16.0%
+
+- Dockerfile: 12.5%
+
+- Python: 5.8%
+
+- Shell: 5.2%
+
 <hr>
 
 ## What tools/resources I have used
@@ -36,6 +50,16 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 <hr>
 
 ## Browsers and testing
+
+<hr>
+
+## Responsive design
+
+<p align="center"><img src="assets/images/responsive.png" alt="responsive design" 800"/></p>
+
+I utilized [this website](https://ui.dev/amiresponsive) to obtain the image shown above, demonstrating the website's responsiveness as it adapts its content to various screen sizes, including smartphones, tablets, and desktop viewports.
+
+Continous testing and inspection with dev-tools and the usage of media queries have made the website responsive regarding it's desing.
 
 <hr>
 
