@@ -104,7 +104,8 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 - JavaScript: 
 
-## Deployment
+## Deployment procedure
+
 
 <hr>
 
