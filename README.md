@@ -6,6 +6,11 @@
 
 ### The purpose of this project is to provide an engaging and fun way for Harry Potter fans to challenge their knowledge of the series by answering some random questions in a quiz app.
 
+<hr>
+
+[This is the link](https://markohautala.github.io/portfolio-project-2/) to the deployed live website for this project.
+
+[This is the link](https://github.com/markohautala/portfolio-project-2) to the GitHub repository for this project.
 
 <hr>
 
@@ -99,15 +104,24 @@ Discuss the impact of this bug on users and the importance of the fix.
 
 ## Lighthouse testing and result
 
+- Performance: 96%
+
+- Accessibility: 100%
+
+- Best Practices: 100%
+
+- SEO: 100%
+
+
 <hr>
 
 ## Validator testing
 
-- CSS: 
+- CSS: No warnings or problems to show - CSS code validated using W3C CSS Validator.
 
-- HTML: 
+- HTML: The HTML code passed the W3 validator with no warnings - "Document checking completed. No errors or warnings to show."
 
-- JavaScript: 
+- JavaScript: The JavaScript code for this project passed and got validated using the JSHint with no warnings or errors.
 
 <hr>
 
@@ -121,7 +135,6 @@ To deploy the page using GitHub pages:
 - Select pages in the left hand navigation menu.
 - From the source dropdown, select main branch and click save.
 - The site has now been deployed - it might take a few minutes for it to load.
-
 
 <hr>
 
