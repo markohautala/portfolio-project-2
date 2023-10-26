@@ -18,7 +18,9 @@
 
 Accoring to my GitHub, these are the coding-languages that are used in the project:
 
-<p align="center"><img src="assets/images/languages.png" alt="programming languages" 800"/></p>
+<p align="center">
+  <img src="assets/images/languages.png" alt="programming languages" width="300">
+</p>
 
 - JavaScript: 43.9%
 
@@ -41,20 +43,38 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 - Color gradient background: The entire page is adorned with a continuous gradient background, smoothly transitioning between different colors from top to bottom. This design choice is intended to provide the user with a visually pleasing and enjoyable experience while doing the quiz.
 
 - Quiz-module: The centerpiece of this application is the quiz module. It commences with a 'start quiz' button, followed by a sequence of 15 unique questions derived from the Harry Potter series.
-<p align="center"><img src="assets/images/picture1.png" alt="responsive design" 400"/></p>
+
+<p align="center">
+  <img src="assets/images/picture1.png" alt="start quiz button" width="300">
+</p>
 
 - Each question presents four answer choices, and upon selection, it visually indicates correctness with either a green or red color. 
-<p align="center"><img src="assets/images/picture2.png" alt="responsive design" 400"/></p>
-<p align="center"><img src="assets/images/picture3.png" alt="responsive design" 400"/></p>
 
-- Subsequently, a 'next question' button appears after each question response, guiding the user to the subsequent question. 
-<p align="center"><img src="assets/images/picture4.png" alt="responsive design" 400"/></p>
+<p align="center">
+  <img src="assets/images/picture2.png" alt="four options in quiz" width="300">
+</p>
+
+<p align="center">
+  <img src="assets/images/picture3.png" alt="wrong and correct colors on buttons" width="300">
+</p>
+
+- Subsequently, a 'next question' button appears after each question response, guiding the user to the subsequent question.
+
+<p align="center">
+  <img src="assets/images/picture4.png" alt="next question button" width="300">
+</p>
 
 Upon reaching the final question, this button transforms into a 'restart quiz' option, allowing users to begin the quiz anew.
-<p align="center"><img src="assets/images/picture5.png" alt="responsive design" 400"/></p>
+
+<p align="center">
+  <img src="assets/images/picture5.png" alt="restart quiz button" width="300">
+</p>
 
 - Footer: At the bottom of the page, underneath the quiz-module, there is a footer-section with 3 icons - Instagram, GitHub and a LinkedIn icon with internal links that open in a new tab. These links takes the user to the creater of the quiz-app (me, the developer).
-<p align="center"><img src="assets/images/picture6.png" alt="responsive design" 400"/></p>
+
+<p align="center">
+  <img src="assets/images/picture6.png" alt="footer elements" width="500">
+</p>
 
 - All the buttons, including the ones in the footer are styled to have a :hover effect to help the user to understand and visually know what buttin is selected with the pointer/mouse.
 
