@@ -1,24 +1,31 @@
+
+
+
+
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-div');
-
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
 //these ones are set to let because they change - can't be const
 let shuffledQuestions, currentQuestionIndex;
 
+
 // when start quiz button is clicked, startGame function is started
 startButton.addEventListener('click', startGame);
+
 //when next-button clicked, current question index is incremented and jumps to set next question function
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
 
+
+
 function startGame() {
 
-    //this hides the start quiz button
+    //hides the start-quiz button
     startButton.classList.add('hide');
 
     //randomizes or shuffles all the questions
