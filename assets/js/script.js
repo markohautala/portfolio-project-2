@@ -8,7 +8,6 @@ const questionContainerElement = document.getElementById('question-div');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
-//these ones are set to let because they change - can't be const
 let shuffledQuestions, currentQuestionIndex;
 
 
