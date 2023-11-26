@@ -7,12 +7,12 @@
     box-sizing: border-box;
     font-family: 'Single Day', Passero One, sans-serif;
 }
-
-/*generic colors to be used in the correct and wrong answers*/
+/*
 :root {
     --color-wrong: #ff6e6e;
     --color-correct: #7dfa85;
 }
+*/
 
 body {
     display: flex;
@@ -113,7 +113,6 @@ button:hover {
 .hide {
     display: none;
 }
-
 
 /*FOOTER*/
 

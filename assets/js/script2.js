@@ -198,6 +198,10 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("button");
         answerButton.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", pickAnswer)
     });
 }
 
@@ -211,6 +215,16 @@ function resetState(){
         answerButton.removeChild(answerButton.firstChild);
     }
 
+}
+
+function pickAnswer(){
+    const chosenButton = e.target;
+    const isCorrect = chosenButton.dataset.correct === "true";
+    if(isCorrect){
+        chosenButton.classList.add("correct")
+    }else{
+        chosenButton.classList.add("incorrect")
+    }
 }
 
 startGame();
