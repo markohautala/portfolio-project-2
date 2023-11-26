@@ -1,52 +1,4 @@
-/*  here we decare all the constants and get elements from the HTML file 
-    to be able to work with them in JavaScript. Const can't be changed but 
-    declaring a let makes it a variable that we can change later on in the code.
-
-    The score and currentQuestionIndex are set to 0, and they will change 
-    later on when the user gets more points and goes along in the quiz.
-*/
-const questionElement = document.getElementById('question');
-const answerButton = document.getElementById('answer-buttons');
-const nextButton = document.getElementById('next-button');
-let currentQuestionIndex = 0;
-let score = 0;
-
-
-
-/*  This function is called startGame and when called, it will set the 
-    next buttons inner text to "Next Question". It will also set the score to 0 
-    and start at the first question (index 0) in the questions-object.
-    At last, it will call the showQuestion function.
-*/
-function startGame() {
-    nextButton.innerHTML = "Next Question"
-    score = 0;
-    currentQuestionIndex = 0;
-    showQuestion();
-}
-
-/* This function will change the question elements inner HTML to what the current
-   question index is on - if the index is on 3, it will get the fourth question 
-   to change and display the innerHTML to that question-text.
-   It will also change the answers accordingly.
-   So, in essence, this function prepares and displays a question along with 
-   its corresponding answer buttons in the web-page.
-*/
-function showQuestion() {
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNumber = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("button");
-        answerButton.appendChild(button);
-    });
-}
-
-
-/*  Here below we have declared a JavaScript object containing the true and false
+/*  Here below we have declared a JavaScript array containing the true and false
     answers and the questions.
 */
 const questions = [
@@ -196,3 +148,52 @@ const questions = [
     }
 
 ];
+
+
+/*  here we decare all the constants and get elements from the HTML file 
+    to be able to work with them in JavaScript. Const can't be changed but 
+    declaring a let makes it a variable that we can change later on in the code.
+
+    The score and currentQuestionIndex are set to 0, and they will change 
+    later on when the user gets more points and goes along in the quiz.
+*/
+const questionElement = document.getElementById('question');
+const answerButton = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-button');
+let currentQuestionIndex = 0;
+let score = 0;
+
+/*  This function is called startGame and when called, it will set the 
+    next buttons inner text to "Next Question". It will also set the score to 0 
+    and start at the first question (index 0) in the questions-array.
+    At last, it will call the showQuestion function.
+*/
+function startGame(){
+    nextButton.innerHTML = "Next Question"
+    score = 0;
+    currentQuestionIndex = 0;
+    showQuestion();
+}
+
+
+/* This function will change the question elements inner HTML to what the current
+   question index is on. It will also change the answers innerHTML accordingly.
+   So, in essence, this function prepares and displays a question along with 
+   its corresponding answer buttons in the web-page. it also adds the class names 
+   to those buttons so that they get the proper CSS styling and finally appends 
+   the buttons to the HTML.
+*/
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNumber = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("button");
+        answerButton.appendChild(button);
+    });
+}
+
+startGame();
