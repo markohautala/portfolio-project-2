@@ -130,6 +130,9 @@ Continous testing and inspection with dev-tools and the usage of media queries h
 #### Bug 4
 - When I made my website responsive using media queries I noticed that the "footer crashed with the main-element". They overlapped but they are suppose to be own sections on their own places. I tried to change "height: 100vh;" to "height: 100%;" instead and this solved all the issues instantly.
 
+#### Bug 5
+When I had made two functions in JavaScript, and when I wanted to see how they worked I could not get them to display the questions on my deployed website. I debugged this and made some reasearch and noticed that it was a better practise to declare variables, like questions in the beginning of the JS-file. I moved the questions up and suddenly they popped up in the website and I made them work - my functions worked fine, it was just the problem that the questions hade to be higher up in the document to be able to work.
+
 <hr>
 
 ## Lighthouse testing and result
@@ -170,6 +173,6 @@ To deploy the page using GitHub pages:
 
 ## Credits
 
-- I have got inspiration from "Web Dev Simplified" from YouTube - they had a video on how to structure a quiz app and it has been really helpful in the process of building my own in this project.
+
 
 <hr>

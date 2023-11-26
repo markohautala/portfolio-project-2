@@ -182,8 +182,13 @@ function startGame(){
    its corresponding answer buttons in the web-page. it also adds the class names 
    to those buttons so that they get the proper CSS styling and finally appends 
    the buttons to the HTML.
+
+   The resetState function will when called, reset the previous 
+   question + answers, and and make room for the new question and answers. That 
+   is why it is placed first in the showQuestion function.
 */
 function showQuestion(){
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
@@ -194,6 +199,18 @@ function showQuestion(){
         button.classList.add("button");
         answerButton.appendChild(button);
     });
+}
+
+/*   This function resets the state by hiding the "Next Question" button 
+     and removing all child elements (answer buttons) from the answerButton 
+     container, preparing for a new question.
+*/
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild);
+    }
+
 }
 
 startGame();
