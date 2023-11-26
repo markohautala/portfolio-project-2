@@ -1,6 +1,22 @@
+/*  here we decare all the constants and get elements from the HTML file 
+    to be able to work with them in JavaScript. Const can't be changed but 
+    declaring a let makes it a variable that we can change later on in the code.
+
+    The score and currentQuestionIndex are set to 0, and they will change 
+    later on when the user gets more points and goes along in the quiz
+*/
+
+const questionElement = document.getElementById('question');
+const answerButton = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-button');
+
+let currentQuestionIndex = 0;
+let score = 0;
 
 
-//Below are all the questions and the different options
+/*  Here below we have declared a JavaScript object containing the true and false
+    answers and the questions.
+*/
 const questions = [
     {
         question: 'What is the core of Hermione Granger\'s wand?',
