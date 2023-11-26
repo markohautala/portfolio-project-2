@@ -35,12 +35,12 @@ main {
 /*section holding the logo*/
 #logo-section {
     text-align: center;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 /*the logo with the harry potter text*/
 #logo {
-    width: 80%;
+    width: 75%;
 }
 
 /*The container that containes the class container*/
@@ -148,6 +148,11 @@ button:hover {
         width: 600px;
         height: 600px;
     }
+
+   /*the logo with the harry potter text*/
+   #logo {
+       width: 90%;
+   }
 
     .button {
         /*makes the space bigger between the buttons*/
