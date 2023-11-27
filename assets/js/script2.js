@@ -160,6 +160,7 @@ const questions = [
 const questionElement = document.getElementById('question');
 const answerButton = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-button');
+const startQuizButton = document.getElementById('start-quiz-button');
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -227,6 +228,8 @@ function chooseAnswer(e) {
         button.disabled = true;
     });
     nextButton.style.display = "inline";
+    startQuizButton.classList.add("hide");
+
 }
 
 startGame();
