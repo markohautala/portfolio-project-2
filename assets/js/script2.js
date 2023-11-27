@@ -201,7 +201,7 @@ function showQuestion(){
         if (answer.correct){
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", pickAnswer)
+        button.addEventListener("click", chooseAnswer)
     });
 }
 
@@ -217,13 +217,13 @@ function resetState(){
 
 }
 
-function pickAnswer(){
+function chooseAnswer(e){
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
     if(isCorrect){
-        chosenButton.classList.add("correct")
+        chosenButton.classList.add("correct");
     }else{
-        chosenButton.classList.add("incorrect")
+        chosenButton.classList.add("incorrect");
     }
 }
 
