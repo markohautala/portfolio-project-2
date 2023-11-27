@@ -175,17 +175,10 @@ function startGame(){
     showQuestion();
 }
 
-
-/* This function will change the question elements inner HTML to what the current
-   question index is on. It will also change the answers innerHTML accordingly.
-   So, in essence, this function prepares and displays a question along with 
-   its corresponding answer buttons in the web-page. it also adds the class names 
-   to those buttons so that they get the proper CSS styling and finally appends 
-   the buttons to the HTML.
-
-   The resetState function will when called, reset the previous 
-   question + answers, and and make room for the new question and answers. That 
-   is why it is placed first in the showQuestion function.
+/* This function updates the HTML content to display a new 
+   question and its corresponding answer buttons on the DOM/webpage, 
+   applying CSS styling, and utilizes a resetState function to clear 
+   the previous question and answers before displaying the new ones.
 */
 function showQuestion(){
     resetState();
@@ -217,11 +210,23 @@ function resetState(){
 
 }
 
+/* function handles user interaction with quiz answer 
+   buttons, updating their styles based on correctness, disabling 
+   all buttons after a selection, and displaying the next button.
+*/
 function chooseAnswer(e) {
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
 
     chosenButton.classList.add(isCorrect ? "correctAnswer" : "incorrectAnswer");
+
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correctAnswer");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "inline";
 }
 
 startGame();
