@@ -217,14 +217,11 @@ function resetState(){
 
 }
 
-function chooseAnswer(e){
+function chooseAnswer(e) {
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
-    if(isCorrect){
-        chosenButton.classList.add("correct");
-    }else{
-        chosenButton.classList.add("incorrect");
-    }
+
+    chosenButton.classList.add(isCorrect ? "correctAnswer" : "incorrectAnswer");
 }
 
 startGame();

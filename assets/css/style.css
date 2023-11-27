@@ -95,12 +95,12 @@ main {
 }
 
 /*these 2 codes underneath will change the colors on the buttons when an answer is right or wrong*/
-.correct {
-    background-color: rgba(0, 128, 0, 0.815);
+.correctAnswer {
+    background-color: #23C552
 }
 
-.incorrect {
-    background-color: rgba(255, 0, 0, 0.815);
+.incorrectAnswer {
+    background-color: #F84F31
 }
 
 
