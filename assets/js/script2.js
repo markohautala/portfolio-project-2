@@ -162,8 +162,22 @@ const questionElement = document.getElementById('question');
 const answerButton = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-button');
 const startQuizButton = document.getElementById('start-quiz-button');
+const button = document.getElementById("button");
+const questionSection = document.getElementById("question-div");
 let currentQuestionIndex = 0;
 let points = 0;
+
+/*  The welcomeUser function modifies the appearance by adding a "hide" 
+    class to the answerButton element, sets the initial "welcome-message", 
+    and attaches an event listener to the startQuizButton 
+    that triggers the startGame function when clicked, initiating the 
+    Harry Potter quiz.
+*/
+function welcomeUser(){
+    answerButton.classList.add("hide");
+    questionElement.innerHTML = "Welcome to the Harry Potter quiz! Let the magic begin!"
+    startQuizButton.addEventListener("click", startGame);
+}
 
 /*  This function is called startGame and when called, it will set the 
     next buttons inner text to "Next Question". It will also set the score to 0 
@@ -171,16 +185,18 @@ let points = 0;
     At last, it will call the displayQuestion function.
 */
 function startGame() {
+    answerButton.classList.remove("hide");
     nextButton.innerHTML = "Next Question";
     points = 0;
     currentQuestionIndex = 0;
+    startQuizButton.classList.add("hide");
     displayQuestion();
 }
 
-/* This function updates the HTML content to display a new 
-   question and its corresponding answer buttons on the DOM/webpage, 
-   applying CSS styling, and utilizes a resetState function to clear 
-   the previous question and answers before displaying the new ones.
+/*  This function updates the HTML content to display a new 
+    question and its corresponding answer buttons on the DOM/webpage, 
+    applying CSS styling, and utilizes a resetState function to clear 
+    the previous question and answers before displaying the new ones.
 */
 function displayQuestion() {
     resetState();
@@ -195,15 +211,14 @@ function displayQuestion() {
         answerButton.appendChild(button);
         if (answer.correct) {
             button.dataset.correct = answer.correct;
-            points++;
         }
         button.addEventListener("click", chooseAnswer);
     });
 }
 
-/*   This function resets the state by hiding the "Next Question" button 
-     and removing all child elements (answer buttons) from the answerButton 
-     container, preparing for a new question.
+/*  This function resets the state by hiding the "Next Question" button 
+    and removing all child elements (answer buttons) from the answerButton 
+    container, preparing for a new question.
 */
 function resetState() {
     nextButton.style.display = "none";
@@ -213,15 +228,20 @@ function resetState() {
 
 }
 
-/* Function below handles user interaction with quiz answer 
-   buttons, updating their styles based on correctness, disabling 
-   all buttons after a selection, and displaying the next button.
+/*  Function below handles user interaction with quiz answer 
+    buttons, updating their styles based on correctness, disabling 
+    all buttons after a selection, and displaying the next button.
+    It also increments the points by one every time the user answers the correct 
+    answer.
 */
 function chooseAnswer(e) {
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
 
     chosenButton.classList.add(isCorrect ? "correctAnswer" : "incorrectAnswer");
+    if (isCorrect){
+        points++;
+    }
 
     Array.from(answerButton.children).forEach(button => {
         if (button.dataset.correct === "true") {
@@ -233,6 +253,19 @@ function chooseAnswer(e) {
     startQuizButton.classList.add("hide");
 
 }
+
+/*  The displayPoints function resets the quiz state, updates the HTML 
+    to show the player's current score out of the total possible 
+    points, and changes the text and visibility of the next button 
+    to prompt the user to retry the quiz.
+*/
+function displayPoints(){
+    resetState();
+    questionElement.innerHTML = `Your gamescore is ${points} out of ${questions.length} points.`;
+    nextButton.innerHTML = "Retry the quiz.";
+    nextButton.style.display = "inline";
+}
+
 /* 
     The processNextQuestionButton function increments the currentQuestionIndex 
     and checks if there are more questions remaining. If so, it displays the 
@@ -257,5 +290,4 @@ nextButton.addEventListener("click", ()=> {
 }
 });
 
-
-startGame();
+welcomeUser();

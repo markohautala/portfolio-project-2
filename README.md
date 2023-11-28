@@ -131,7 +131,10 @@ Continous testing and inspection with dev-tools and the usage of media queries h
 - When I made my website responsive using media queries I noticed that the "footer crashed with the main-element". They overlapped but they are suppose to be own sections on their own places. I tried to change "height: 100vh;" to "height: 100%;" instead and this solved all the issues instantly.
 
 #### Bug 5
-When I had made two functions in JavaScript, and when I wanted to see how they worked I could not get them to display the questions on my deployed website. I debugged this and made some reasearch and noticed that it was a better practise to declare variables, like questions in the beginning of the JS-file. I moved the questions up and suddenly they popped up in the website and I made them work - my functions worked fine, it was just the problem that the questions hade to be higher up in the document to be able to work.
+- When I had made two functions in JavaScript, and when I wanted to see how they worked I could not get them to display the questions on my deployed website. I debugged this and made some reasearch and noticed that it was a better practise to declare variables, like questions in the beginning of the JS-file. I moved the questions up and suddenly they popped up in the website and I made them work - my functions worked fine, it was just the problem that the questions hade to be higher up in the document to be able to work.
+
+#### Bug 6
+- When I tried my website I had a minor issue with the incrementation of the points. I have the correct code "points++;" but it is placed wrong in the JavaScript code. It increments as fast as a new question begins, rather than incrementing when a question in answered correctly - resulting in maximal points achived every time the quiz is made - even if some questions were answered wrong. 
 
 <hr>
 
@@ -172,7 +175,6 @@ To deploy the page using GitHub pages:
 <hr>
 
 ## Credits
-
-
+-The tutorial from Web Dev Simplified was exclusively utilized for inspiration and guidance in crafting the HTML section of the project, particularly to establish a solid foundation and design for the smart quiz section. No JavaScript code was directly adopted from the tutorial; instead, it served as a reference solely for HTML structure and layout.
 
 <hr>
