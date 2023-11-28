@@ -162,7 +162,7 @@ const answerButton = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-button');
 const startQuizButton = document.getElementById('start-quiz-button');
 let currentQuestionIndex = 0;
-let score = 0;
+let points = 0;
 
 /*  This function is called startGame and when called, it will set the 
     next buttons inner text to "Next Question". It will also set the score to 0 
@@ -171,7 +171,7 @@ let score = 0;
 */
 function startGame(){
     nextButton.innerHTML = "Next Question"
-    score = 0;
+    points = 0;
     currentQuestionIndex = 0;
     showQuestion();
 }
@@ -194,6 +194,7 @@ function showQuestion(){
         answerButton.appendChild(button);
         if (answer.correct){
             button.dataset.correct = answer.correct;
+            points++;
         }
         button.addEventListener("click", chooseAnswer)
     });
@@ -219,6 +220,8 @@ function chooseAnswer(e) {
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
 
+
+    
     chosenButton.classList.add(isCorrect ? "correctAnswer" : "incorrectAnswer");
 
     Array.from(answerButton.children).forEach(button => {
