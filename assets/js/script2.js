@@ -1,5 +1,5 @@
 /*  Here below we have declared a JavaScript array containing the true and false
-    answers and the questions.
+    answers and the questions for the Harry Potter Quiz.
 */
 const questions = [
     {
@@ -150,12 +150,13 @@ const questions = [
 ];
 
 
-/*  here we decare all the constants and get elements from the HTML file 
-    to be able to work with them in JavaScript. Const can't be changed but 
-    declaring a let makes it a variable that we can change later on in the code.
-
-    The score and currentQuestionIndex are set to 0, and they will change 
-    later on when the user gets more points and goes along in the quiz.
+/*  
+    In this section, we declare constants and retrieve HTML elements 
+    for JavaScript manipulation. Constants, recognized by const, 
+    remain unchanged, while variables declared with let can be modified 
+    later in the code. The initial values for score and currentQuestionIndex 
+    are both set to 0, representing placeholders that will be updated as the 
+    user progresses through the quiz and earns points.
 */
 const questionElement = document.getElementById('question');
 const answerButton = document.getElementById('answer-buttons');
@@ -167,13 +168,13 @@ let points = 0;
 /*  This function is called startGame and when called, it will set the 
     next buttons inner text to "Next Question". It will also set the score to 0 
     and start at the first question (index 0) in the questions-array.
-    At last, it will call the showQuestion function.
+    At last, it will call the displayQuestion function.
 */
-function startGame(){
-    nextButton.innerHTML = "Next Question"
+function startGame() {
+    nextButton.innerHTML = "Next Question";
     points = 0;
     currentQuestionIndex = 0;
-    showQuestion();
+    displayQuestion();
 }
 
 /* This function updates the HTML content to display a new 
@@ -181,7 +182,7 @@ function startGame(){
    applying CSS styling, and utilizes a resetState function to clear 
    the previous question and answers before displaying the new ones.
 */
-function showQuestion(){
+function displayQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
@@ -192,11 +193,11 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("button");
         answerButton.appendChild(button);
-        if (answer.correct){
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
             points++;
         }
-        button.addEventListener("click", chooseAnswer)
+        button.addEventListener("click", chooseAnswer);
     });
 }
 
@@ -204,15 +205,15 @@ function showQuestion(){
      and removing all child elements (answer buttons) from the answerButton 
      container, preparing for a new question.
 */
-function resetState(){
+function resetState() {
     nextButton.style.display = "none";
-    while(answerButton.firstChild){
+    while (answerButton.firstChild) {
         answerButton.removeChild(answerButton.firstChild);
     }
 
 }
 
-/* function handles user interaction with quiz answer 
+/* Function below handles user interaction with quiz answer 
    buttons, updating their styles based on correctness, disabling 
    all buttons after a selection, and displaying the next button.
 */
@@ -220,12 +221,10 @@ function chooseAnswer(e) {
     const chosenButton = e.target;
     const isCorrect = chosenButton.dataset.correct === "true";
 
-
-    
     chosenButton.classList.add(isCorrect ? "correctAnswer" : "incorrectAnswer");
 
     Array.from(answerButton.children).forEach(button => {
-        if(button.dataset.correct === "true"){
+        if (button.dataset.correct === "true") {
             button.classList.add("correctAnswer");
         }
         button.disabled = true;
@@ -234,5 +233,29 @@ function chooseAnswer(e) {
     startQuizButton.classList.add("hide");
 
 }
+/* 
+    The processNextQuestionButton function increments the currentQuestionIndex 
+    and checks if there are more questions remaining. If so, it displays the 
+    next question; otherwise, it displays the user's points. The event listener 
+    for a button click checks if there are more questions, calling 
+    processNextQuestionButton if true, otherwise initiating the 
+    startGame function.
+*/
+function processNextQuestionButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        displayPoints();
+    }
+}
+nextButton.addEventListener("click", ()=> {
+    if(currentQuestionIndex < questions.length){
+    processNextQuestionButton();
+    } else {
+    startGame();
+}
+});
+
 
 startGame();
