@@ -149,14 +149,13 @@ const questions = [
 
 ];
 
-
 /*  
     In this section, we declare constants and retrieve HTML elements 
-    for JavaScript manipulation. Constants, recognized by const, 
-    remain unchanged, while variables declared with let can be modified 
-    later in the code. The initial values for score and currentQuestionIndex 
-    are both set to 0, representing placeholders that will be updated as the 
-    user progresses through the quiz and earns points.
+    for JavaScript manipulation. Constants remain unchanged, while variables 
+    declared with let can be modified later in the code. The initial values 
+    for score and currentQuestionIndex are both set to 0, representing 
+    placeholders that will be updated as the user progresses through the 
+    quiz and earns points.
 */
 const questionElement = document.getElementById('question');
 const answerButton = document.getElementById('answer-buttons');
@@ -225,13 +224,36 @@ function resetState() {
     while (answerButton.firstChild) {
         answerButton.removeChild(answerButton.firstChild);
     }
-
 }
+
+/* 
+    The processNextQuestionButton function increments the currentQuestionIndex 
+    and checks if there are more questions remaining. If so, it displays the 
+    next question; otherwise, it displays the user's points. The event listener 
+    for a button click checks if there are more questions, calling 
+    processNextQuestionButton if true, otherwise initiating the 
+    startGame function.
+*/
+function processNextQuestionButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        displayPoints();
+    }
+}
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        processNextQuestionButton();
+    } else {
+        startGame();
+    }
+});
 
 /*  Function below handles user interaction with quiz answer 
     buttons, updating their styles based on correctness, disabling 
     all buttons after a selection, and displaying the next button.
-    It also increments the points by one every time the user answers the correct 
+    It also increments the points by one every time the user clicks the correct 
     answer.
 */
 function chooseAnswer(e) {
@@ -259,35 +281,11 @@ function chooseAnswer(e) {
     points, and changes the text and visibility of the next button 
     to prompt the user to retry the quiz.
 */
-function displayPoints(){
+function displayPoints() {
     resetState();
     questionElement.innerHTML = `Your gamescore is ${points} out of ${questions.length} points.`;
     nextButton.innerHTML = "Retry the quiz.";
     nextButton.style.display = "inline";
 }
-
-/* 
-    The processNextQuestionButton function increments the currentQuestionIndex 
-    and checks if there are more questions remaining. If so, it displays the 
-    next question; otherwise, it displays the user's points. The event listener 
-    for a button click checks if there are more questions, calling 
-    processNextQuestionButton if true, otherwise initiating the 
-    startGame function.
-*/
-function processNextQuestionButton() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-    } else {
-        displayPoints();
-    }
-}
-nextButton.addEventListener("click", ()=> {
-    if(currentQuestionIndex < questions.length){
-    processNextQuestionButton();
-    } else {
-    startGame();
-}
-});
 
 welcomeUser();
