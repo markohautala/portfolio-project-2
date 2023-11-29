@@ -7,12 +7,6 @@
     box-sizing: border-box;
     font-family: 'Single Day', Passero One, sans-serif;
 }
-/*
-:root {
-    --color-wrong: #ff6e6e;
-    --color-correct: #7dfa85;
-}
-*/
 
 body {
     display: flex;
@@ -59,7 +53,7 @@ main {
     text-align: center;
     border: 3px solid rgba(122, 129, 157, 1);
     width: 400px;
-    height: 500px;
+    height: 450px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.812);
     box-shadow: 0 0 10px 2px;
@@ -119,7 +113,7 @@ button:hover:not([disabled]) {
     border-color: white;
 }
 
-.hide {
+.hidden {
     display: none;
 }
 
@@ -156,7 +150,7 @@ button:hover:not([disabled]) {
 
 /*responsive design and media queries*/
 
-/*tablets*/
+/*tablets and higher*/
 @media screen and (min-width: 768px) {
     .container {
         width: 600px;
