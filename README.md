@@ -19,20 +19,20 @@
 Accoring to my GitHub, these are the coding-languages that are used in the project:
 
 <p align="center">
-  <img src="assets/images/languages.png" alt="programming languages" width="300">
+  <img src="assets/images/languages.png.png" alt="programming languages" width="300">
 </p>
 
-- JavaScript: 43.9%
+- JavaScript: 48.4%
 
-- CSS: 16.6%
+- CSS: 15.6%
 
-- HTML: 16.0%
+- HTML: 15.1%
 
-- Dockerfile: 12.5%
+- Dockerfile: 11.1%
 
-- Python: 5.8%
+- Python: 5.2%
 
-- Shell: 5.2%
+- Shell: 4.6%
 
 <hr>
 
@@ -42,41 +42,42 @@ Accoring to my GitHub, these are the coding-languages that are used in the proje
 
 - Color gradient background: The entire page is adorned with a continuous gradient background, smoothly transitioning between different colors from top to bottom. This design choice is intended to provide the user with a visually pleasing and enjoyable experience while doing the quiz.
 
-- Quiz-module: The centerpiece of this application is the quiz module. It commences with a 'start quiz' button, followed by a sequence of 15 unique questions derived from the Harry Potter series.
+- Quiz-module: The centerpiece of this application is the quiz module. It commences with a 'start quiz' button, followed by a sequence of 16 unique and challenging questions derived from the Harry Potter series. The question-section is remade to be a "welcome"-message and when the user clicks on the start button, the text transforms to the first question in the quiz.
 
 <p align="center">
-  <img src="assets/images/picture1.png" alt="start quiz button" width="300">
+  <img src="assets/images/pictureStart.png" alt="start quiz button" width="300">
 </p>
 
-- Each question presents four answer choices, and upon selection, it visually indicates correctness with either a green or red color. 
+- Each question presents four answer choices, and upon selection, it visually indicates correctness with either a green or red color.
+There is also a number presented right before the question, so that the user knows what question they are currently on. The "next-question-button" is hidden, until the user clicks on an answer - then it appears and takes the user to the next question. Upon the next question, the next-question-button is hidden again until the user interacts with the next question answer-alternatives. And so it goes on until the quiz is done.
 
 <p align="center">
-  <img src="assets/images/picture2.png" alt="four options in quiz" width="300">
+  <img src="assets/images/fourAnswers.png" alt="four options in quiz" width="300">
 </p>
 
 <p align="center">
-  <img src="assets/images/picture3.png" alt="wrong and correct colors on buttons" width="300">
+  <img src="" alt="wrong and correct colors on buttons" width="300">
 </p>
 
-- Subsequently, a 'next question' button appears after each question response, guiding the user to the subsequent question.
+Upon reaching the final question, the "next-question-button" transforms into a 'Retry the quiz'-button, allowing users to begin the quiz again. Above the button there is a text, that uses template literal syntax to showcase the number of correct answers answered - called points or gamescore, compared to the total amount of questions in the quiz.
 
 <p align="center">
-  <img src="assets/images/picture4.png" alt="next question button" width="300">
-</p>
-
-Upon reaching the final question, this button transforms into a 'restart quiz' option, allowing users to begin the quiz anew.
-
-<p align="center">
-  <img src="assets/images/picture5.png" alt="restart quiz button" width="300">
+  <img src="assets/images/restart.png" alt="restart quiz button" width="300">
 </p>
 
 - Footer: At the bottom of the page, underneath the quiz-module, there is a footer-section with 3 icons - Instagram, GitHub and a LinkedIn icon with internal links that open in a new tab. These links takes the user to the creater of the quiz-app (me, the developer).
 
 <p align="center">
-  <img src="assets/images/picture6.png" alt="footer elements" width="500">
+  <img src="assets/images/picture6.png" alt="footer elements" width="300">
 </p>
 
-- All the buttons, including the ones in the footer are styled to have a :hover effect to help the user to understand and visually know what buttin is selected with the pointer/mouse.
+- All the buttons, including the ones in the footer are styled to have a :hover effect to help the user to understand and visually know what buttin is selected with the pointer/mouse. The hover is disabled when the user has clicked on a answer - and this is a design-choise to help the user understand that they should now click on the "next-question-button" that just appeared. 
+
+- The design decision here is that when a user clicks on the incorrect answer, the chosen option is highlighted in red, indicating the mistake. Meanwhile, the correct answer is displayed in green. However, when the user selects the correct answer, only the button with the correct choice is shown without any red highlighting on other buttons. This approach visually emphasizes and reinforces the correctness of the user's response, while also providing immediate feedback for incorrect selections.
+
+<p align="center">
+  <img src="assets/images/correct-answer-chosen.png" alt="correct answer chosen" width="300">
+</p>
 
 <hr>
 
@@ -131,22 +132,27 @@ Continous testing and inspection with dev-tools and the usage of media queries h
 - When I made my website responsive using media queries I noticed that the "footer crashed with the main-element". They overlapped but they are suppose to be own sections on their own places. I tried to change "height: 100vh;" to "height: 100%;" instead and this solved all the issues instantly.
 
 #### Bug 5
-- When I had made two functions in JavaScript, and when I wanted to see how they worked I could not get them to display the questions on my deployed website. I debugged this and made some reasearch and noticed that it was a better practise to declare variables, like questions in the beginning of the JS-file. I moved the questions up and suddenly they popped up in the website and I made them work - my functions worked fine, it was just the problem that the questions hade to be higher up in the document to be able to work.
+- When I had made two functions in JavaScript, and when I wanted to see how they worked I could not get them to display the questions on my deployed website. I debugged this and made some reasearch and noticed that it was a better practise to declare variables, like questions in the beginning of the JS-file. I moved the questions up and suddenly they popped up in the website and I made them work - my functions worked fine, it was just the problem that the questions had to be higher up in the document to be able to work.
 
 #### Bug 6
-- When I tried my website I had a minor issue with the incrementation of the points. I have the correct code "points++;" but it is placed wrong in the JavaScript code. It increments as fast as a new question begins, rather than incrementing when a question in answered correctly - resulting in maximal points achived every time the quiz is made - even if some questions were answered wrong. 
+- When I tried my website I had a minor issue with the incrementation of the points. I have the correct code "points++;" but it was placed wrong in the JavaScript code. It increments as fast as a new question begins, rather than incrementing when a question in answered correctly - resulting in maximal points achived every time the quiz is performed - even if some questions were answered wrong. I solved this by making a if-statement to it.
 
 <hr>
 
 ## Lighthouse testing and result
 
-- Performance: 96%
+- Performance: 95%
 
 - Accessibility: 100%
 
 - Best Practices: 100%
 
 - SEO: 100%
+
+<p align="center">
+  <img src="assets/images/lighthouse.png" alt="footer elements" width="300">
+</p>
+
 
 
 <hr>
@@ -171,6 +177,12 @@ To deploy the page using GitHub pages:
 - Select pages in the left hand navigation menu.
 - From the source dropdown, select main branch and click save.
 - The site has now been deployed - it might take a few minutes for it to load.
+
+- To clone the repository, use the following command in your terminal: "git clone https://github.com/markohautala/portfolio-project-2.git"
+
+- To fork the repository, click the "Fork" button on the GitHub repository page. This creates a copy of the project under your GitHub account, allowing you to make changes without affecting the original project.
+
+With these steps, you can not only deploy the site but also have the flexibility to extend and enhance it if you want.
 
 <hr>
 

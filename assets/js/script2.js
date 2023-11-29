@@ -172,7 +172,7 @@ let points = 0;
 */
 function welcomeUser(){
     quizAnswers.classList.add("hidden");
-    displayArea.innerHTML = "Welcome to the Harry Potter quiz! Let the magic begin!"
+    displayArea.innerHTML = "Welcome to the Harry Potter quiz! Let the magic begin!";
     startQuizButton.addEventListener("click", startGame);
 }
 
